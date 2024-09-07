@@ -39,8 +39,6 @@ constant T1H : integer := 80;  -- 0.80 µs
 constant T0L : integer := 85;  -- 0.85 µs
 constant T1L : integer := 45;  -- 0.45 µs
 ```
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## References
 - [WS2812 Datasheet](https://cdn-shop.adafruit.com/datasheets/WS2812.pdf)
