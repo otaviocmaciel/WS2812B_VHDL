@@ -1,0 +1,77 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+--
+--  Develop by José Otávio Cavalcanti Maciel
+--  WS2812 Controller
+--
+--  The Tang Nano 20K development board
+--  has WS2812 LED embedded in the PCB.
+--
+--  The WS2812 is a RGB LED and use Single-Wire
+--  to change the intensity of colors.
+--
+--  The Package is composed by MSB format
+--  24 bits:
+--      * 8 bits for green
+--      * 8 bits for red
+--      * 8 bits for blue
+--
+--  1.25us per bit
+--  Bit 1 -> TH: 0.75us     TL: 0.6us
+--  Bit 0 -> TH: 0.35us     TL: 0.8us
+--  Reset -> 50us
+
+
+entity ws2812_top is
+end ws2812_top;
+
+architecture hardware of ws2812_top is
+
+component clk_gen is
+port(
+    CLK         : in std_logic;
+    CLK_1MHZ    : out std_Logic
+);
+end component;
+
+component bit_gen is
+    port (
+        clk        : in std_logic;            -- Clock de 100 MHz
+        reset_n    : in std_logic;            -- Reset ativo em nível baixo
+        data_in    : in std_logic_vector(23 downto 0);  -- Dados RGB (8 bits para cada cor)
+        start      : in std_logic;            -- Sinal para iniciar a transmissão
+        led_out    : out std_logic;           -- Sinal de controle para o LED
+        done       : out std_logic            -- Indica que a transmissão foi concluída
+    );
+end component;
+
+
+signal CLK : std_logic := '0';
+signal CLK_1MHz : std_logic;
+constant dt : time := 5 ns; 
+
+signal reset_n : std_logic := '0';
+signal RGB     : std_logic_vector(23 downto 0) := "111111111111111111111111";
+signal start	: std_logic := '0';
+signal WS2812	: std_logic;
+signal done	: std_logic;
+begin
+	process
+		begin
+		CLK <= not CLK;
+		wait for dt;
+end process;
+
+process
+begin
+wait for 10*dt;
+reset_n <= '1';
+wait for 10*dt;
+start <= '1';
+end process;
+
+uut1 : clk_gen port map(CLK => CLK, CLK_1MHz => CLK_1MHz);
+uut2 : bit_gen port map(CLK => clk, reset_n => reset_n, data_in => RGB, start => start, led_out => WS2812, done => done);
+end hardware;

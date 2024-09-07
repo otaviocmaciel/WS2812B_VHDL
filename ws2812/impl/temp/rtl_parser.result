@@ -1,0 +1,20 @@
+[
+ {
+  "InstFile" : "D:/ws2812/ws2812/src/ws2812_top.vhd",
+  "InstLine" : 27,
+  "InstName" : "ws2812_top",
+  "ModuleFile" : "D:/ws2812/ws2812/src/ws2812_top.vhd",
+  "ModuleLine" : 27,
+  "ModuleName" : "ws2812_top",
+  "SubInsts" : [
+   {
+    "InstFile" : "D:/ws2812/ws2812/src/ws2812_top.vhd",
+    "InstLine" : 84,
+    "InstName" : "uut1",
+    "ModuleFile" : "D:/ws2812/ws2812/src/bit_gen.vhd",
+    "ModuleLine" : 5,
+    "ModuleName" : "bit_gen"
+   }
+  ]
+ }
+]

@@ -1,0 +1,22 @@
+{
+ "Files" : [
+  {
+   "Library" : "work",
+   "Path" : "D:/ws2812/ws2812/src/bit_gen.vhd",
+   "Type" : "vhdl"
+  },
+  {
+   "Library" : "work",
+   "Path" : "D:/ws2812/ws2812/src/ws2812_top.vhd",
+   "Type" : "vhdl"
+  }
+ ],
+ "IncludePath" : [
+
+ ],
+ "LoopLimit" : 2000,
+ "ResultFile" : "D:/ws2812/ws2812/impl/temp/rtl_parser.result",
+ "Top" : "",
+ "VerilogStd" : "verilog_2001",
+ "VhdlStd" : "vhdl_93"
+}

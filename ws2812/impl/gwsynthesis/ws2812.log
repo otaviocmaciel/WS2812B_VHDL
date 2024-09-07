@@ -1,0 +1,32 @@
+GowinSynthesis start
+Running parser ...
+Analyzing VHDL file 'D:\ws2812\ws2812\src\bit_gen.vhd'
+Analyzing entity 'bit_gen'("D:\ws2812\ws2812\src\bit_gen.vhd":5)
+Analyzing architecture 'behavior'("D:\ws2812\ws2812\src\bit_gen.vhd":19)
+Analyzing VHDL file 'D:\ws2812\ws2812\src\ws2812_top.vhd'
+Analyzing entity 'ws2812_top'("D:\ws2812\ws2812\src\ws2812_top.vhd":27)
+Analyzing architecture 'hardware'("D:\ws2812\ws2812\src\ws2812_top.vhd":35)
+Processing 'ws2812_top(hardware)'("D:\ws2812\ws2812\src\ws2812_top.vhd":27)
+WARN  (EX4206) : Using initial value for 'rgb1' since it is never assigned("D:\ws2812\ws2812\src\ws2812_top.vhd":52)
+WARN  (EX4206) : Using initial value for 'rgb2' since it is never assigned("D:\ws2812\ws2812\src\ws2812_top.vhd":53)
+Processing 'bit_gen(num_leds=2)(behavior)'("D:\ws2812\ws2812\src\bit_gen.vhd":5)
+NOTE  (EX0101) : Current top module is "ws2812_top"
+[5%] Running netlist conversion ...
+Running device independent optimization ...
+[10%] Optimizing Phase 0 completed
+[15%] Optimizing Phase 1 completed
+[25%] Optimizing Phase 2 completed
+Running inference ...
+[30%] Inferring Phase 0 completed
+[40%] Inferring Phase 1 completed
+[50%] Inferring Phase 2 completed
+[55%] Inferring Phase 3 completed
+Running technical mapping ...
+[60%] Tech-Mapping Phase 0 completed
+[65%] Tech-Mapping Phase 1 completed
+[75%] Tech-Mapping Phase 2 completed
+[80%] Tech-Mapping Phase 3 completed
+[90%] Tech-Mapping Phase 4 completed
+[95%] Generate netlist file "D:\ws2812\ws2812\impl\gwsynthesis\ws2812.vg" completed
+[100%] Generate report file "D:\ws2812\ws2812\impl\gwsynthesis\ws2812_syn.rpt.html" completed
+GowinSynthesis finish
