@@ -3,6 +3,4 @@
 
 *.fs linguist-detectable=false
 
-*.html linguist-detectable=false
-
 ws2812/**/*.html
