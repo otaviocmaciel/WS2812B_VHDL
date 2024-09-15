@@ -2,3 +2,5 @@
 *.vhdl linguist-language=VHDL
 
 *.fs linguist-detectable=false
+
+*.html linguist-detectable=false
