@@ -2,6 +2,4 @@
 *.vhdl linguist-language=VHDL
 
 *.fs linguist-detectable=false
-
-ws2812/**/*.html
-ws2812/**/**/*.html
+*.html linguist-detectable=false
