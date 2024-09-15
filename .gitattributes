@@ -1,2 +1,4 @@
 *.vhd linguist-language=VHDL
 *.vhdl linguist-language=VHDL
+
+*.fs linguist-detectable=false
